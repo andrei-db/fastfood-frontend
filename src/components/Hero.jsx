@@ -4,7 +4,7 @@ function Hero() {
   return (
     <section className="h-screen flex flex-col md:flex-row items-center justify-between px-10 md:px-20 bg-white">
       <div className="flex-1 text-center md:text-left space-y-6">
-        <h1 className="text-6xl font-extrabold text-green-800">
+        <h1 className="text-8xl font-extrabold text-green-800">
           FRESH<span className="text-red-500"> FOOD</span>
         </h1>
         <p className="text-gray-600 max-w-md">

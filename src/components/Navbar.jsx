@@ -11,9 +11,7 @@ function Navbar() {
                         <Link to="/menus" className="hover:text-red-500">Menus</Link>
                     </div>
 
-                    <Link to="/" className="text-xl font-bold">
-                        Burgerino
-                    </Link>
+  
 
                     <div className="hidden md:flex gap-8 text-gray-700 font-bold">
                         <Link to="/order" className="hover:text-red-500">Order</Link>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 function Footer() {
     return (
         <>
-            <footer className="py-15">
+            <footer className="py-15 bg-[#242424]">
                 <div className="flex flex-col justify-center items-center mb-20">
                     <h2 className="flex text-3xl border-b-3 mb-10">Subscribe Now</h2>
                     <div className="flex justify-center">
@@ -14,7 +14,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
-                    <div>
+                    <div className="">
                         <h2 className="text-2xl font-bold text-white mb-4">Burgerino</h2>
                         <p className="text-sm">
                             Serving delicious food made with love ❤️.
@@ -22,7 +22,7 @@ function Footer() {
                         </p>
                     </div>
 
-                    <div>
+                    <div className="flex flex-col items-center">
                         <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
                         <ul className="space-y-2">
                             <li><Link to="/" className="hover:text-red-400">Home</Link></li>
