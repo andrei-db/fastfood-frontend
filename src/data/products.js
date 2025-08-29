@@ -23,7 +23,14 @@ const products = [
     description: "Refreshing classic",
     image: "/cola.png",
   },
-   
+   {
+    id: 4,
+    name: "Orange Juice",
+    price: 1.99,
+    category: "drinks",
+    description: "Refreshing orange juice",
+    image: "/orange-juice.png",
+  },
 ];
 
 export default products;

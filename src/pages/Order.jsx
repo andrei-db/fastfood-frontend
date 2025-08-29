@@ -21,7 +21,7 @@ function Order() {
             key={cat}
             onClick={() => setFilter(cat)}
             className={`px-4 py-2 rounded-lg ${
-              filter === cat ? "bg-red-500 text-white" : "bg-gray-200"
+              filter === cat ? "bg-black text-white" : "bg-gray-500"
             }`}
           >
             {cat.charAt(0).toUpperCase() + cat.slice(1)}
@@ -29,7 +29,7 @@ function Order() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filtered.map((product) => (
           <MenuItemCard key={product.id} {...product} />
         ))}
