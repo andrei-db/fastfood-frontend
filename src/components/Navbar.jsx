@@ -14,9 +14,9 @@ function Navbar() {
   
 
                     <div className="hidden md:flex gap-8 text-gray-700 font-bold">
-                        <Link to="/order" className="hover:text-red-500">Order</Link>
                         <Link to="/contact" className="hover:text-red-500">Contact</Link>
-
+                        <Link to="/order" className="hover:text-red-500">Order</Link>
+                        <Link to="/cart" className="hover:text-red-500">Cart</Link>
                     </div>
 
                     <button className="md:hidden p-2 border rounded-lg">
