@@ -1,8 +1,6 @@
-import { useParams } from "react-router-dom";
-import products from "../data/products";
-import { useCart } from "../context/CartContext";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { useParams } from "react-router-dom"
+import products from "../data/products"
+import { useCart } from "../context/CartContext"
 function ProductPage() {
     const { id } = useParams();
     const { addToCart } = useCart();
@@ -13,7 +11,6 @@ function ProductPage() {
 
     return (
         <>
-        <Navbar />
         <div className="max-w-4xl mx-auto p-6 flex flex-col md:flex-row gap-10">
             <img
                 src={product.image}
@@ -34,7 +31,6 @@ function ProductPage() {
                 </button>
             </div>
         </div>
-        <Footer />
         </>
     );
 }

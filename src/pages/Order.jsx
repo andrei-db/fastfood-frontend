@@ -1,8 +1,6 @@
-import { useState } from "react";
-import products from "../data/products";
-import MenuItemCard from "../components/MenuItemCard";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { useState } from "react"
+import products from "../data/products"
+import MenuItemCard from "../components/MenuItemCard"
 function Order() {
   const [filter, setFilter] = useState("all");
 
@@ -11,7 +9,6 @@ function Order() {
 
   return (
     <>
-    <Navbar />
     <div className="p-6 mt-20">
       <h1 className="text-3xl font-bold mb-6 text-center text-[#242424]"></h1>
 
@@ -35,7 +32,6 @@ function Order() {
         ))}
       </div>
     </div>
-    <Footer />
     </>
   );
 }

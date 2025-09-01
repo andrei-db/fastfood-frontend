@@ -1,13 +1,11 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import { useCart } from "../context/CartContext";
-import { Link } from "react-router-dom";
+
+import { useCart } from "../context/CartContext"
+import { Link } from "react-router-dom"
 function CartPage() {
     const { cart, removeFromCart, clearCart } = useCart();
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     return (
         <>
-            <Navbar />
             <div className="max-w-5xl mx-auto p-6 text-black">
                 <h1 className="text-3xl font-bold mb-6 text-center">Your Cart</h1>
 
@@ -93,7 +91,6 @@ function CartPage() {
                     </>
                 )}
             </div>
-            <Footer />
         </>
     );
 }
