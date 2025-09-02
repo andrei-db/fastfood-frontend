@@ -64,7 +64,7 @@ function SideCart() {
                 )}
 
                 <div className="flex justify-center items-center">
-                    <Link to="/cart" className="bg-black text-white text-center px-10 py-3 rounded-md">Check cart</Link>
+                    <Link onClick={closeCart} to="/cart" className="bg-black text-white text-center px-10 py-3 rounded-md">Check cart</Link>
                 </div>
             </div>
         </div>
