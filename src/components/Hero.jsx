@@ -2,7 +2,7 @@ import heroImg from "/burger.png";
 
 function Hero() {
   return (
-    <section className="h-screen flex flex-col md:flex-row items-center justify-between px-10 md:px-20 bg-white">
+    <section className="h-screen flex flex-col md:flex-row items-center justify-between px-10 md:px-20">
       <div className="flex-1 text-center md:text-left space-y-6">
         <h1 className="text-8xl font-extrabold text-green-800">
           FRESH<span className="text-red-500"> FOOD</span>

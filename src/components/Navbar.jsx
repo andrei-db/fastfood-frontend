@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-
 function Navbar() {
+    
     return (
         <>
-            <nav className="w-full z-50 text-black">
+            <nav className={`shadow w-full z-50 bg-white text-black`}>
                 <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
                     <div className="hidden md:flex gap-8 text-gray-700 font-bold">
                         <Link to="/" className="hover:text-red-500">Home</Link>
@@ -11,7 +11,7 @@ function Navbar() {
                         <Link to="/menus" className="hover:text-red-500">Menus</Link>
                     </div>
 
-  
+
 
                     <div className="hidden md:flex gap-8 text-gray-700 font-bold">
                         <Link to="/contact" className="hover:text-red-500">Contact</Link>

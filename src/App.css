@@ -1,6 +1,7 @@
 @import "tailwindcss";
+
 #root {
-width: 100%;
+  width: 100%;
 }
 
 .logo {
@@ -9,9 +10,11 @@ width: 100%;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -20,6 +23,7 @@ width: 100%;
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

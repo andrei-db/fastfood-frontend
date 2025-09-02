@@ -1,15 +1,16 @@
 
 import { useCart } from "../context/CartContext"
 import { Link } from "react-router-dom"
+import { X } from "lucide-react"
 function CartPage() {
-    const { cart, removeFromCart, clearCart } = useCart();
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    const { cartItems, removeFromCart, clearCart } = useCart();
+    const total = cartItems.reduce((sum, item) => sum + item.price, 0);
     return (
         <>
-            <div className="max-w-5xl mx-auto p-6 text-black">
+            <div className="max-w-5xl mx-auto p-6 text-black h-[400px] flex items-center justify-center flex-col">
                 <h1 className="text-3xl font-bold mb-6 text-center">Your Cart</h1>
 
-                {cart.length === 0 ? (
+                {cartItems.length === 0 ? (
                     <div className="text-center">
                         <p className="mb-4">Your cart is empty.</p>
                         <Link
@@ -34,17 +35,17 @@ function CartPage() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {cart.map((item, index) => (
+                                    {cartItems.map((item, index) => (
                                         <tr
                                             key={index}
                                             className="bg-gray-100 rounded-xl"
                                         >
                                             <td className="p-2">
                                                 <button
-                                                    onClick={() => removeFromCart(index)}
+                                                    onClick={() => removeFromCart(item.id)}
                                                     className="text-red-500 p-2 bg-white rounded font-bold me-3"
                                                 >
-                                                    x
+                                                    <X className="h-4 w-4" />
                                                 </button>
                                             </td>
                                             <td className="p-2">
@@ -75,7 +76,7 @@ function CartPage() {
                                 <div className="flex gap-4 mt-6">
                                     <button
                                         onClick={clearCart}
-                                        className="px-6 py-3 bg-gray-300 rounded-lg hover:bg-gray-400"
+                                        className="cursor-pointer px-6 py-3 bg-gray-300 rounded-lg hover:bg-gray-400"
                                     >
                                         Clear Cart
                                     </button>
