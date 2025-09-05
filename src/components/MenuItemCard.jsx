@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
-function MenuItemCard({ id, name, price, description, image }) {
+function MenuItemCard({ _id, name, price, description, image }) {
     const { addToCart } = useCart();
 
     return (
-        <Link to={`/order/${id}`}>
+        <Link to={`/order/${_id}`}>
         <div className=" bg-white text-black rounded-2xl flex flex-col items-center justify-center">
             <img src={image} alt={name} className="h-55 w-60 object-cover rounded-xl mb-3" />
             <h3 className="text-lg font-bold">{name}</h3>

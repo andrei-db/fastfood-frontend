@@ -10,6 +10,7 @@ import CartPage from './pages/CartPage'
 import SideCart from './components/SideCart'
 import SideCartButton from './components/SideCartButton'
 import Contact from './pages/Contact'
+import Checkout from './pages/Checkout'
 function App() {
   const [cartOpen, setCartOpen] = useState(false)
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/order/:id" element={<ProductPage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>
 

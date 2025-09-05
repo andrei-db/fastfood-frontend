@@ -3,8 +3,9 @@ function Contact() {
     return (
         <>
             <div className="text-black">
-                <div className="bg-gray-200 h-[250px] flex items-center justify-center">
-                    <h1 className="text-3xl">Contact</h1>
+                <div className=" bg-[url(bg.png)] h-[250px] bg-no-repeat bg-[length:100%_300px]
+                 flex items-center justify-center">
+                    <h1 className="italic font-bold text-white text-6xl">Contact</h1>
                 </div>
                 <div className="my-20 grid grid-cols-1 md:grid-cols-2">
                     <div className="flex justify-center items-center">
@@ -36,11 +37,11 @@ function Contact() {
                             </button>
                         </form>
                     </div>
-                    <div className='ms-10 w-[550px] bg-gray-100 p-10 rounded-2xl'>
+                    <div className=' w-[550px] bg-gray-100 p-10 rounded-2xl'>
                         <h2 className='text-center text-3xl'>Contact Information</h2>
                         <div className='flex items-center mt-5 bg-white p-5 rounded-2xl'>
-                            <div>
-                                <MapPin className='w-8 h-8 '/>
+                            <div className='bg-green-500 p-3 rounded-full'>
+                                <MapPin className='w-8 h-8 text-white'/>
                             </div>
                             <div className='ms-5'>
                                 <h3 className='font-semibold text-xl'>Address</h3>
@@ -48,8 +49,8 @@ function Contact() {
                             </div>
                         </div>
                         <div className='flex items-center mt-5 bg-white p-5 rounded-2xl'>
-                            <div>
-                                <Phone className='w-8 h-8'/>
+                            <div className='bg-red-400 p-3 rounded-full'>
+                                <Phone className='w-8 h-8 text-white'/>
                             </div>
                            <div className='ms-5'>
                                 <h3 className='font-semibold text-xl'>Contact</h3>
@@ -58,14 +59,12 @@ function Contact() {
                            </div>
                         </div>
                         <div className='flex items-center mt-5 bg-white p-5 rounded-2xl'>
-                             <div>
-                                <CalendarClock className='w-8 h-8'/>
+                             <div className='bg-fuchsia-400 p-3 rounded-full'>
+                                <CalendarClock className='w-8 h-8 text-white '/>
                             </div>
                             <div className='ms-5'>
                                 <h3 className='font-semibold text-xl'>Opening Hours</h3>
-                                <p className='text-gray-500'>Monday - Friday: 9:00 AM - 18:00 PM</p>
-                                <p className='text-gray-500'>Saturday: closed</p>
-                                <p className='text-gray-500'>Sunday: closed</p>
+                                <p className='text-gray-500'>Monday - Sunday: 9:00 AM - 18:00 PM</p>
                             </div>
                         </div>
                     </div>

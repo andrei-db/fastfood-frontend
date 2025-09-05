@@ -57,7 +57,8 @@ function CartPage() {
 
 
                                             <td> <span className="font-bold">${item.price.toFixed(2)}</span></td>
-                                            <td> <input type="number" className="text-center rounded bg-gray-400 font-bold w-10" defaultValue={1} min={1} /></td>
+                                            <td> <input type="number" className="text-center rounded bg-gray-400 font-bold w-10"
+                                             defaultValue={item.quantity} min={1} /></td>
                                             <td> <span className="font-bold">${item.price.toFixed(2)}</span></td>
 
                                         </tr>
