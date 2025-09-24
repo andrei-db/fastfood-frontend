@@ -3,15 +3,15 @@ import MenuItemCard from "../components/MenuItemCard"
 function Order() {
   const [filter, setFilter] = useState("all");
   const [products, setProducts] = useState([]);
-
+  const API_URL = import.meta.env.VITE_API_URL;
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch(`${API_URL}/products`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error("Error fetching products:", err));
   }, []);
 
-   const filtered =
+  const filtered =
     filter === "all" ? products : products.filter((p) => p.category === filter);
   return (
     <>

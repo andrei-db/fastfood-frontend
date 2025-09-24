@@ -1,13 +1,14 @@
 import { useParams } from "react-router-dom"
 import { useCart } from "../context/CartContext"
 import { useState, useEffect } from "react";
+
 function ProductPage() {
     const { id } = useParams();
     const { addToCart, cartItems } = useCart();
     const [product, setProduct] = useState(null);
-
+    const API_URL = import.meta.env.VITE_API_URL;
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`${API_URL}/products/${id}`)
             .then((res) => res.json())
             .then((data) => setProduct(data))
             .catch((err) => console.error("Error fetching product:", err));

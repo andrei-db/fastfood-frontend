@@ -11,7 +11,7 @@ export default function Checkout() {
     const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)
     const deliveryFee = 10
     const total = subtotal + deliveryFee
-
+    const API_URL = import.meta.env.VITE_API_URL;
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -33,7 +33,7 @@ export default function Checkout() {
         };
 
         try {
-            const res = await fetch("http://localhost:5000/orders", {
+            const res = await fetch(`${API_URL}/orders`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(order),
